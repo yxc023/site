@@ -8,14 +8,17 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>">Michael的文档</a>
+          <a class="navbar-brand" href="/">Michael的文档</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>index.html">首页</a></li>
-            <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>about.html">关于</a></li>
+            <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>post_index.html">blog</a></li>
+
             <#--  <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>posts.html">博客</a></li>  -->
-            <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>wiki.html">wiki</a></li>
+            <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>wiki_gradle_index.html">gradle</a></li>
+            <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>about.html">关于</a></li>
+
 
              <#--  <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>${config.feed_file}">Subscribe</a></li>  -->
             <#--  <li class="dropdown">

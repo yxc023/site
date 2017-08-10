@@ -6,7 +6,7 @@
 		<h1><#escape x as x?xml>${content.title}</#escape></h1>
 	</div>
 
-	<p>建设中。。。</p>
+	<p>${content.body}</p>
 
 	<hr />
 

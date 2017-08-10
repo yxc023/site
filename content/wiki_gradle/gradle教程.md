@@ -1,6 +1,6 @@
-title=wiki知识库
+title=gradle教程
 date=2017-07-24
-type=post
+type=wiki_gradle
 tags=blog
 status=published
 ~~~~~~
