@@ -1,14 +1,14 @@
-+++
-date = "2016-02-08T23:19:32+08:00"
-draft = false
-title = "rabbitmq使用实践"
-categories = [ "rabbitmq" ]
-type="develop"
+title=rabbitmq管理使用实践
+date=2016-02-08T23:19:32+08:00
+type=post
+tags=mq
+status=published
+~~~~~~
 
-+++
 #### 原创, 转载请注明出处[https://blog.yangxiaochen.com](https://blog.yangxiaochen.com)
+<!-- more -->
 
-# MQ数据源
+ # MQ数据源 
 
 1. ```datasource -> topic exchange```, 数据源已固定格式发入exchange, exchange类型为topic,既可以使用路由route_key, 又可以进行通配. 不要将生产者, 消费者用在同一队列上, 这样耦合度高, 消息无法复用.
 
@@ -21,7 +21,6 @@ type="develop"
 5. 程序中不要生成持久的exchange, queue. 而是在管理界面生成. 防止程序改动造成的废弃的exchange, queue仍然存在在rabbitmq中.
 
 6. 命名统一.
-<!-- more -->
 
         exchangeName: datasource:[sth.sth]
         queueName: [消费者程序名称]:[exchangeName].[subject]

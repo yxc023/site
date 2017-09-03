@@ -8,11 +8,14 @@
 	<#list posts as post>
   		<#if (post.status == "published")>
   			<a href="${post.uri}"><h1><#escape x as x?xml>${post.title}</#escape></h1></a>
-  			<p>${post.date?string("dd MMMM yyyy")}</p>
-  			<p>${post.body?keep_before("<!-- more -->")}</p>
-			<#if (post.body?index_of("<!-- more -->") > 0)>
-				<a href="${post.uri}">阅读全文</a>
-			</#if>
+  			<p>${post.date?string("yyyy-MM-dd")}
+				<span> tags: </span>
+				<#list post.tags as tag>
+				<span>
+					<a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>tags/${tag}.html">${tag}</a>
+				</span>
+				</#list>  
+			</p>
   		</#if>
   	</#list>
 	

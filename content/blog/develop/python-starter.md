@@ -1,11 +1,12 @@
-+++
-date = "2016-02-09T01:19:32+08:00"
-draft = false
-title = "python入门"
-categories = [ "python" ]
-type="develop"
 
-+++
+title=python入门
+date=2016-02-09T01:19:32+08:00
+type=post
+tags=python
+status=published
+~~~~~~
+
+
 #### 原创, 转载请注明出处[https://blog.yangxiaochen.com](https://blog.yangxiaochen.com)
 
 本文不讲python语法, 因为语法手册到处都有, 而且也不难, 本文旨在介绍python的生态环境和开发环境搭建.

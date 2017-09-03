@@ -1,14 +1,12 @@
-+++
-date = "2017-03-30T19:19:32+08:00"
-draft = false
-title = "spring & spring mvc 初始化介绍"
-categories = [ "spring","spring mvc","config","context" ]
-type="java"
-
-+++
+title=spring & spring mvc 初始化介绍
+date=2017-03-30T19:19:32+08:00
+type=post
+tags=java, spring
+status=published
+~~~~~~
 
 
-# spring & spring mvc 初始化介绍
+<!-- # spring & spring mvc 初始化介绍 -->
 
 ## web项目的结构
 

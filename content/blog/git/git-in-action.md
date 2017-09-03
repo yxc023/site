@@ -1,13 +1,11 @@
-+++
-date = "2016-06-21T14:52:32+08:00"
-draft = false
-title = "git分支管理与使用规范"
-categories = [ "git" ]
-type="git"
-payable="true"
-+++
+title=git分支管理与使用规范
+date=2016-06-21T14:52:32+08:00
+type=post
+tags=git
+status=published
+~~~~~~
 
-# git分支管理与使用规范
+<!-- # git分支管理与使用规范 -->
 ## 分支管理
 ### flow
 * git flow

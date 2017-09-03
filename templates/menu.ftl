@@ -12,11 +12,16 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>index.html">首页</a></li>
-            <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>post_index.html">blog</a></li>
+             <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>index.html">首页</a></li> 
+            <#--  <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>post_index.html">blog</a></li>  -->
 
             <#--  <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>posts.html">博客</a></li>  -->
             <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>wiki_gradle_index.html">gradle</a></li>
+            <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>tags/git.html">git</a></li>
+            <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>tags/spring.html">spring</a></li>
+            <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>${config.archive_file}">archive</a></li>
+
+
             <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>about.html">关于</a></li>
 
 

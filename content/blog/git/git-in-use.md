@@ -1,19 +1,17 @@
-+++
-date = "2016-07-04T21:52:32+08:00"
-draft = false
-title = "git实际开发语句"
-categories = [ "git" ]
-type="git"
-payable="true"
-+++
+title=git实际开发语句
+date=2016-07-04T21:52:32+08:00
+type=post
+tags=git
+status=published
+~~~~~~
 
 
-# git实际使用指南
+<!-- # git实际使用指南 -->
 
-## framework上工作git指南
-1. 切到`framework`分支
+## dev上工作git指南
+1. 切到`dev`分支
 
-        git checkout framework
+        git checkout dev
 
 2. 开分支
 
@@ -42,9 +40,9 @@ payable="true"
 
 7.  `merge request`有冲突
 
-    1. 切换到`framework`, 更新之.
+    1. 切换到`dev`, 更新之.
 
-            git co framework
+            git co dev
             git pull
 
     2. 切回你的分支.
@@ -55,9 +53,9 @@ payable="true"
 
         进行rebase
 
-            git rebase framework
+            git rebase dev
             
-        `git rebase framework` 的意思是将`你的分支`上的每一次提交, 应用到`framework`分支的尾部.
+        `git rebase dev` 的意思是将`你的分支`上的每一次提交, 应用到`dev`分支的尾部.
 
     4. 如果提示有冲突, 转`7.5`. 如果没有冲突:
 
@@ -76,13 +74,13 @@ payable="true"
 
 
 ## 如果出现以下情况, 很有可能你就错了
-* 把`framework`上的代码merge到分支:
+* 把`dev`上的代码merge到分支:
 
-        git merge framework
+        git merge dev
 
-* 在`framework`上merge分支代码
+* 在`dev`上merge分支代码
 
-* 在framework上执行`git pull`发现不是`fast forward`
+* 在dev上执行`git pull`发现不是`fast forward`
 
 * 在任何分支上执行`git pull`发现不是`fast forward`
 
@@ -95,8 +93,8 @@ payable="true"
     git commit
 
 ### 方法二, 保证没有冲突, 且合并为一次提交!
-在`4. 提交分支` 时, 先更新`framework分支`, 然后在`你的分支`执行
+在`4. 提交分支` 时, 先更新`dev分支`, 然后在`你的分支`执行
 
-    git rebase framework -i
+    git rebase dev -i
 
  把除了第一个`pick`全改成`s`或者`squash`. 提示很全, 试试吧.

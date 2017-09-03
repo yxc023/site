@@ -1,13 +1,11 @@
-+++
-date = "2016-06-12T13:52:32+08:00"
-draft = false
-title = "git-flow实践"
-categories = [ "git" ]
-type="git"
-payable="true"
-+++
+title=git-flow实践
+date=2016-06-12T13:52:32+08:00
+type=post
+tags=git,gitflow
+status=published
+~~~~~~
 
-# git-flow 操作实践
+<!-- # git-flow 操作实践 -->
 
 ## 安装
 

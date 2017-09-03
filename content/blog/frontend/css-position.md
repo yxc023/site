@@ -1,12 +1,10 @@
-+++
-date = "2016-02-08T22:19:32+08:00"
-draft = false
-title = "css定位指南"
-tags = [ "css", "html" ]
-categories = [ "Development", "css" ]
-type="frontend"
-payable="true"
-+++
+title=css 定位指南
+date=2011-11-08T22:19:32+08:00
+type=post
+tags=frontend
+status=published
+~~~~~~
+
 #### 原创, 转载请注明出处[https://blog.yangxiaochen.com](https://blog.yangxiaochen.com)
 
 ## 前置知识

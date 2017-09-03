@@ -1,10 +1,9 @@
-+++
-date = "2016-02-09T04:19:32+08:00"
-draft = false
-title = "homebrew安装旧版本软件"
-categories = [ "homebrew","brew" ]
-type="mac"
-+++
+title=homebrew安装旧版本软件
+date=2016-02-09T04:19:32+08:00
+type=post
+tags=mac,brew
+status=published
+~~~~~~
 #### 原创, 转载请注明出处[https://blog.yangxiaochen.com](https://blog.yangxiaochen.com)
 
 不需要用brew versions ,这个已经过时了.
