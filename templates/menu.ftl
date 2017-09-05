@@ -21,6 +21,7 @@
             <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>tags/spring.html">spring</a></li>
             <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>${config.archive_file}">archive</a></li>
 
+            <li><a href="https://github.com/yxc023/jbake">my jbake</a></li>
 
             <li><a href="<#if (content.rootpath)??>${content.rootpath}<#else></#if>about.html">关于</a></li>
 
