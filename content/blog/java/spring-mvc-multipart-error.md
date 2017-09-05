@@ -106,4 +106,11 @@ NOTE: This filter needs to run after multipart processing in case of a multipart
 
 ## 结论
 
-`HttpServletRequest.getParts()` 方法是 servlet 3.0 之后获取  `multipart/form-data` 类型数据的一个标准方法，凡是实现了 servlet 3.0 的服务器都支持，可以尽量使用 StandardServletMultipartResolver
+spring mvc 提供了两种 multipartResolver：
+
+1. `CommonsMultipartResolver`：从 request 的 inputStream 中读取文件
+2. `StandardServletMultipartResolver`：使用 `ttpServletRequest.getParts()` 方法来获取文件
+
+spring boot 使用的是 `StandardServletMultipartResolver` 。
+
+>`tpServletRequest.getParts()` 方法是 servlet 3.0 之后获取  `multipart/form-data` 类型的请求数据的一个标准方法，凡是实现了 servlet 3.0 的服务器都支持，可以尽量使用 StandardServletMultipartResolver
