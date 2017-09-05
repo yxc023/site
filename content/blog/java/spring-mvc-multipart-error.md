@@ -109,8 +109,8 @@ NOTE: This filter needs to run after multipart processing in case of a multipart
 spring mvc 提供了两种 multipartResolver：
 
 1. `CommonsMultipartResolver`：从 request 的 inputStream 中读取文件
-2. `StandardServletMultipartResolver`：使用 `ttpServletRequest.getParts()` 方法来获取文件
+2. `StandardServletMultipartResolver`：使用 `HttpServletRequest.getParts()` 方法来获取文件
 
-spring boot 使用的是 `StandardServletMultipartResolver` 。
+spring boot 使用的自动配置的一个 filter `HiddenHttpMethodFilter` 会比较早的时候读取 request 的 inputStream，导致 `CommonsMultipartResolver` 无法在获取到数据。所以 spring boot mvc 默认是用 `StandardServletMultipartResolver`，用错 resolver 会导至上传文件读不到。
 
 >`HttpServletRequest.getParts()` 方法是 servlet 3.0 之后获取  `multipart/form-data` 类型的请求数据的一个标准方法，凡是实现了 servlet 3.0 的服务器都支持，可以尽量使用 StandardServletMultipartResolver
