@@ -1,0 +1,92 @@
+= jooq 介绍
+杨晓辰
+2018-04-04
+:toc: left
+:toclevels: 4
+:icons: font
+:jbake-type: post
+:jbake-tags: db, jooq
+:jbake-status: published
+
+
+== 前言
+
+几乎每一个 java 程序员都要跟数据库打交道. 最常用的就是通过 java 的 jdbc 来跟数据库进行交互操作.
+
+而 jdbc 本身比较底层, 写起来比较繁琐, 于是产生了很多数据库抽象层的框架或者工具. 比如 JPA, Hibernate, Mybatis 等等.
+
+今天介绍的 JOOQ 也是这样一个框架
+
+=== jpa, hibernate
+- 复杂, 不灵活
+- 隐藏了 sql
+- jSQL, HQL
+
+=== mybatis
+- xml 繁杂
+- 注解配置不直观
+- 虽然可以codegen, 但复杂的不支持.
+
+
+=== jdbcTemplate
+- typesafe 不保证
+- mapper 自己实现
+
+> SQL was never meant to be object-oriented. SQL was never meant to be anything other than... SQL!
+
+== 我们的项目
+- 50% ~ 80% curd
+- 20% ~ 50% query
+
+== in php
+- pdo 直接写 sql
+- Eloquent ORM
+
+[source,php]
+----
+$results = DB::select('select * from users where id = :id', ['id' => 1]);
+
+$price = DB::table('orders')
+                ->where('finalized', 1)
+                ->avg('price');
+----
+
+== in groovy
+[source,groovy]
+----
+def taxRows = sql.rows("select * from product_tax where (product_id = ? or category_id = ?) AND ? >= stime AND ? <= etime",
+                    [productId, categoryId, orderTime, orderTime])
+----
+
+== 使用方式
+* sql builder
+* sql executor
+* typesafe executor
+* curd
+* use with other
+
+== 缺点
+=== 性能
+* construct jOOQ queries
+* render SQL strings
+* bind values to prepared statements
+* fetch results
+
+> jOOQ's overhead compared to plain JDBC is typically less than 1ms per query.
+
+=== 商业化版本
+
+针对商业数据库
+
+=== 学习成本
+
+* 生成器配置比较复杂. 但可以配置为常用场景.
+* 写法需要看文档.
+
+== 提出的问题
+1. 不是直接通过 sql 查问题点
+
+    log 的问题.  mybatis 也是同样问题: <include> , 动态 SQL
+
+
+2. java8以上

@@ -1,5 +1,6 @@
 = 方法论总结
-v1.0, 2017-11-05
+杨晓辰
+2017-11-05
 :toc: left
 :toclevels: 4
 :icons: font
