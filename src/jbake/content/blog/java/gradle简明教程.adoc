@@ -1,11 +1,12 @@
-title=gradle简明教程
-date=2017-07-24 16:00:00
-type=post
-tags=java, gradle, groovy
-status=published
-~~~~~~
-
-<!-- # gradle简明教程 -->
+= gradle简明教程
+杨晓辰
+2017-07-24 16:00:00
+:toc: left
+:toclevels: 4
+:icons: font
+:jbake-type: post
+:jbake-tags: java, gradle, groovy
+:jbake-status: published
 
 ## 前言
 
@@ -26,6 +27,35 @@ gradle 是一个构建工具。负责管理项目依赖，组织项目结构，�
 ## 安装
 
 从 官网 下载，解压即可，并将 bin/gradle 命令加入到 path 中。
+
+== 打开一个 gradle 项目
+
+通常, 大家首次接触 gradle 是遇到一个 gradle 作为构建工具项目.
+
+观察基于 gradle 构建的项目结构, 通常有以下几个文件:
+
+----
+build.gradle                      // 重要, 构建脚本文件，主要的构建配置都在这里写
+gradlew                           // gradle wrapper 执行脚本文件，用来在没有安装 gradle 的情况下执行 gradle 命令。当然，第一次执行时会下载 gradle。
+gradlew.bat                       // gradle wrapper 执行脚本文件的 windows 版
+gradle                            
+|- wrapper
+   |- gradle-wrapper.properties   // 重要, 描述了 gradlew 使用的 gradle 版本
+   |- gradle-wrapper.jar          // gradlew 执行时用到的 jar, 无需关注
+settings.gradle                   // 项目配置，指明根项目名字和引入的 module
+----
+
+执行下
+
+----
+./gradlew tasks
+----
+
+能够列出所有可用的构建命令. 这时如果是第一次运行 gradle, 且本地没有缓存过 gradle-wrapper.properties 中描述的 gradle 版本, 则会去 gradle-wrapper.properties 指的的 url 去下载 gradle.
+
+但是这个官方地址的 gradle 下载通常会比较慢, 所以如果是要给同事分享 gradle 项目时, 可以把 gradle 提前下载到内网, 然后将 gradle-wrapper.properties 中的下载地址改成内网的地址.
+
+使用 idea 打开这个项目, 也就是 open build.gradle 文件, 就可以引入项目了.
 
 ## 新建一个 gradle 项目
 
@@ -63,8 +93,6 @@ gradle 是一个构建工具。负责管理项目依赖，组织项目结构，�
    */
    plugins {
        id 'java'
-       id 'idea'
-       id "com.yangxiaochen.scaffold" version "1.0.2"
    }
 
    /*
@@ -94,41 +122,9 @@ gradle 是一个构建工具。负责管理项目依赖，组织项目结构，�
    rootProject.name = 'project-example'
    // include 'sub-project'
    ```
+4. 用 idea open build.gradle 文件.
 
-4. 引入到 Idea IDE 中
-   ```
-   gradle idea
-   ```
 
-   目录下新生成了三个文件
-
-   ```
-   project-example.iml
-   project-example.ipr
-   project-example.iws
-   ```
-
-   接下来只要用 Idea IDE 来 open project-example.ipr 文件，就可以引入 project 了， 之后每当
-   1. 依赖更改
-
-   2. 目录结构更改
-
-   只要执行 `gradle cleanIdea idea` 就可以刷新这三个文件，Idea IDE 就会重新加载识别项目了。
-
-   > 我的经验是不要使用 Idea IDE 来直接用 build.gradle 来打开文件，因为 Idea IDE 在解析 build.gradle 文件时有其他操作，而且 Idea IDE 与 gradle 版本有时会不太兼容，导致项目解析错误；而使用 gradle 来生成 Idea IDE 工程文件的方式就不会有问题，而且速度更快，更容易debug。
-
-5. 引入之后，还需要生成 src 文件夹和 sub project
-
-   ```shell
-   gradle createSrc idea
-   gradle createModule --name foo idea
-   ```
-
-   `createSrc` 和`createModule`都是插件 `com.yangxiaochen.scaffold`里的 task，而 `idea`和`cleanIdea` 是插件 `idea`提供的 task
-
-## 引入一个 gradle 项目
-
-跟上一节创建一个 gradle 项目类似，引入`idea`插件，然后生成 Idea IDE 的工程文件，再 open 即可
 
 ## 常见问题
 
@@ -271,4 +267,4 @@ configurations {
 
 ## 交流
 
-欢迎加入群 536890082，gradle，spring，activiti 交流
+欢迎加入群 661035226，gradle，spring，activiti 交流
