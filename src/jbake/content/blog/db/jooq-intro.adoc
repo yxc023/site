@@ -479,3 +479,6 @@ jooq 是个商业软件, 售价不菲. 但我们可以使用开源版本.
 
 * 生成器配置比较复杂. 需要一个找一个同事来阅读文档称为配置专家, 当然也可以直接找一些比较通用的配置, 比如我这次进行测试的这个配置就可以满足大多数的需求.
 * DSL写法需要看文档. 但文档很全, 比如想知道 `group by` 怎么写直接文档中搜索就好.
+
+
+> 示例完整源码 https://github.com/yxc023/code-examples/blob/master/java/jooq/src/test/java/com/yangxiaochen/example/jooq/JOOQTest.java
