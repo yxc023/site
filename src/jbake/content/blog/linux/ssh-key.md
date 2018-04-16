@@ -1,14 +1,13 @@
-+++
-date = "2016-02-09T09:19:32+08:00"
-draft = false
-title = "ssh-key生成与配置"
-categories = [ "ssh-key" ]
-type="linux"
-
-+++
-
-#### 原创, 转载请注明出处[https://blog.yangxiaochen.com](https://blog.yangxiaochen.com)
-
+= 利用ssh-key免密码访问远程主机
+杨晓辰
+2016-04-14
+:toc: left
+:toclevels: 4
+:icons: font
+:jbake-sid: ssh-copy-id
+:jbake-type: post
+:jbake-tags: linux
+:jbake-status: published
 
 ## 命令
 

@@ -1,9 +1,13 @@
-title=rabbitmq管理使用实践
-date=2016-02-08T23:19:32+08:00
-type=post
-tags=mq
-status=published
-~~~~~~
+= rabbitmq管理使用实践
+杨晓辰
+2016-02-08 23:19:32
+:toc: left
+:toclevels: 4
+:icons: font
+:jbake-sid: rabbit-mq-manage
+:jbake-type: post
+:jbake-tags: mq, rabbitmq
+:jbake-status: published
 
 #### 原创, 转载请注明出处[https://blog.yangxiaochen.com](https://blog.yangxiaochen.com)
 <!-- more -->

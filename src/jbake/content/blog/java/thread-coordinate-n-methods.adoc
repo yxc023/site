@@ -1,11 +1,13 @@
-+++
-date = "2016-04-13T23:19:32+08:00"
-draft = false
-title = "Java线程协调的多种写法"
-categories = [ "java" ]
-type="java"
-payable="true"
-+++
+= java 多线程同步的几种写法
+杨晓辰
+2016-04-14
+:toc: left
+:toclevels: 4
+:icons: font
+:jbake-sid: thread-coordinate-n-methods
+:jbake-type: post
+:jbake-tags: java, thread
+:jbake-status: published
 
 > 回字的四种写法...
 
