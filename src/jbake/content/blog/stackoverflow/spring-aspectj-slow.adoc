@@ -5,7 +5,7 @@
 :toclevels: 4
 :icons: font
 :jbake-type: post
-:jbake-tags: stackoverflow, aspectj
+:jbake-tags: stackoverflow, aspectj, spring
 :jbake-status: published
 
 == 现象
