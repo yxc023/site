@@ -65,7 +65,7 @@ spring 启动是到织如阶段时, 对 DefaultDSLContext 的实例进行判断�
 
 == 后记
 
-其实 `execution(* com.lianjia.xxx.platform.*.dao..*.*(..))` 应该也是可以分析出范围的, 还不知道是出于什么考虑没有做判断.
+其实 `execution(* com.lianjia.xxx.platform.*.dao..*.*(..))` 应该也是可以分析出范围的, 还没有细究是出于什么考虑没有做判断.
 
 大家可以对现有项目中的切面进行优化, 尝试减少启动时间.
 
