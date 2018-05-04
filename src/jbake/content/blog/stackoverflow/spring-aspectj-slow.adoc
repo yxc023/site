@@ -59,7 +59,21 @@ Scoping designators 可以非常快的判断目标是否在范围内, 避免不
 @Pointcut("within(com.lianjia.xxx.platform..*) && execution(* com.lianjia.xxx.platform.*.dao..*.*(..))" )
 ----
 
+结果界面无效, 因为我要切的目标是 mybatis 的 mapper, 因为这个 mapper 实际上是 com.sun.proxy.Proxy 对象. 最终改成
+
+----
+@Pointcut("within(com.sun.proxy..*) && execution(* com.lianjia.xxx.platform.*.dao..*.*(..))" )
+----
+
+或者
+
+----
+@Pointcut("!within(org.jooq.impl..*) && execution(* com.lianjia.xxx.platform.*.dao..*.*(..))" )
+----
+
 spring 启动是到织如阶段时, 对 DefaultDSLContext 的实例进行判断织如时, 可以通过 fastMatch 直接判断不行, 就不用对方法逐个检查了.
+
+
 
 最终结果启动耗时减少了.
 
@@ -70,3 +84,5 @@ spring 启动是到织如阶段时, 对 DefaultDSLContext 的实例进行判断�
 大家可以对现有项目中的切面进行优化, 尝试减少启动时间.
 
 aop 是个好东西, 但是也带来复杂性, 可读性, 性能上的隐患. 严格一点来说, 要刨根问底, 保证项目的配置启动过程是完全掌控在手的, 避免黑盒(即不知道为啥, 反正这么配就能 run 起来了, 没有啥问题出现) 
+
+代理对象和正常对象的切入方式会有不同, 需要注意.
